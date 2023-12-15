@@ -21,16 +21,17 @@ pipeline {
                 }
             }
         }
-        stage("Build application") {
-            steps {
-                script {
-                    // Change to the project directory
-                    dir('/var/lib/jenkins/workspace/1234') {
-                        sh "mvn clean package"
+       stage("Build application") {
+           steps {
+               script {
+                   // Change to the project directory
+                   dir('/var/lib/jenkins/workspace/1234') {
+                       sh "mvn -f /var/lib/jenkins/workspace/1234 clean package"
                     }
                 }
             }
         }
+
         stage("Testing application") {
             steps {
                 script {
