@@ -16,6 +16,7 @@ pipeline {
                     // Change to the project directory
                     dir('/var/lib/jenkins/workspace/1234') {
                         git branch: 'main', url: 'https://github.com/divija231/regester-app'
+                        sh 'ls -la'
                     }
                 }
             }
