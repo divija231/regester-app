@@ -18,9 +18,6 @@ pipeline{
     }
     stage("build application"){
       steps{
-        dir('/var/lib/jenkins/workspace/1234')
-        
-        
         sh "mvn clean package"
       }
     }
